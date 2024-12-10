@@ -1,0 +1,180 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(#dccef0, #736388);
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 410px;
+  border-radius: 10px;
+  background: linear-gradient(#352163, #33143c);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Search Section */
+.search-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 25px;
+}
+
+.search-form {
+  position: relative;
+  flex: 1;
+}
+
+.search-form .material-symbols-rounded {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+}
+
+.search-input {
+  width: 100%;
+  height: 54px;
+  outline: none;
+  color: #fff;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 6px;
+  padding: 0 20px 0 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  transition: 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #a38cd9;
+}
+
+.search-input::placeholder {
+  color: #ddd;
+  text-transform: none;
+}
+
+.location-button {
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.location-button:hover {
+  border-color: #a38cd9;
+}
+
+.location-button .material-symbols-rounded {
+  font-size: 24px;
+  color: #fff;
+}
+
+/* Weather Section */
+.weather-section {
+  padding: 20px;
+  color: #fff;
+}
+
+.current-weather {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.weather-icon {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.temperature {
+  font-size: 2rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* Forecast with horizontal scroll */
+.hourly-forecast {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.hourly-forecast::-webkit-scrollbar {
+  height: 8px;
+}
+
+.hourly-forecast::-webkit-scrollbar-thumb {
+  background: #a38cd9;
+  border-radius: 4px;
+}
+
+.hourly-forecast::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.weather-list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.weather-item {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: 0.2s ease;
+}
+
+.weather-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.weather-item .weather-icon {
+  width: 28px;
+  aspect-ratio: 1;
+}
+
+.weather-item .time {
+  font-size: 0.8rem;
+  color: #ddd;
+}
